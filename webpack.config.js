@@ -1,8 +1,12 @@
 module.exports = {
-    entry: './src/app/index.js',
+    entry: ['babel-polyfill','./src/app/index.js'],
     output: {
         path: __dirname + '/src/public',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
+    },
+    devServer: {
+      historyApiFallback: true,
     },
     module: {
         rules: [
@@ -12,7 +16,8 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env','@babel/preset-react']
+                        presets: ['@babel/preset-env','@babel/preset-react'],
+                        plugins: ["@babel/plugin-proposal-class-properties"]
                     }
                 }
             },
@@ -34,7 +39,11 @@ module.exports = {
                     }
                   }
                 ]
-              }
+            },
+            {
+              test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+              loader: 'url-loader?limit=100000' 
+            }
         ]
     }
 };

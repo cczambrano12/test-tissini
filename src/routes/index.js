@@ -1,19 +1,14 @@
 //ROUTES
 const { Router } = require("express");
 const router = Router();
+const path = require('path');
 
-router.get("/", (req, res) => {
-  //Al recibir solicitud con el metodo get a la ruta principal "/"
-  // res.send('Hello world'); // Envia un string
-  res.json({ Title: "Hello World" }); // Envía un json
-});
+router.get('/catalogo', function(req, res) {
+  res.sendFile(path.join(__dirname, '../public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
 
-router.get("/test", (req, res) => {
-  const data = {
-    name: "Test",
-  };
-  res.json(data); // Envía un json
-});
-
-//Exporta el router con las nuevas rutas agregadas
 module.exports = router;

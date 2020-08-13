@@ -218,3 +218,34 @@ html {
     color: #000;
     text-shadow: none;
 }
+
+.background  {
+    background-image: url(../../public/resources/login-desktop.0a0cacb5.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.cardTitle  {
+    background-image: url(../../public/resources/logo.c752bf8f.png);
+    margin-top: 200px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    min-width: 0;
+}

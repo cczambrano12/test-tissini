@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 //ROUTES
-// app.use(require('./routes/index'));
-// app.use('/api/users',require('./routes/users')); 
+app.use(require('./routes/index'));
+app.use('/api/login',require('./routes/login')); 
 // app.use('/api/todo',require('./routes/todo')); 
 // app.use('/categorias',require('./routes/categorias')); 
 
@@ -23,3 +23,4 @@ app.use(express.static(path.join(__dirname,'public')));
 app.listen(app.get('port'), () => {
     console.log(`Server on port ${app.get('port')}` ) 
 })
+
