@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 //Componentes
-//import Tasks from "./components/Tasks";
+import Appbar from "./components/Appbar";
+import BottomBar from "./components/BottomBar";
 
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
     //Llama el componente Tasks dentro de la division pasandole la funcion addTask
     return (
       <div>
-        Hello
+        <Appbar/>
+        <BottomBar/>
         {/* <Router>
           <Link to="/">Home</Link><br/>
           <Link to="/categorias">Posts</Link>
