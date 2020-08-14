@@ -249,3 +249,22 @@ html {
     flex-wrap: nowrap;
     min-width: 0;
 }
+
+.container .btn {
+    position: relative;
+    top: 100%;
+    left: 95%;
+    transform: translate(-90%, -140%);
+    -ms-transform: translate(-80%, -50%);
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 0px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+
+  .container .btn:hover {
+    background-color: grey;
+  }

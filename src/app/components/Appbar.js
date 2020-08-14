@@ -24,7 +24,7 @@ class Appbar extends Component {
         }}
       >
         <Toolbar>
-          <Grid xs={6}>
+          <Grid item={true} xs={6}>
           <Typography style={{ fontFamily:"Montserrat",color: "#f06292", fontSize: "25px" }}>
             Cliente Pruebas
           </Typography>
